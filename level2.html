@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <title>Level 2</title>
+            <link rel="stylesheet" type="text/css" href="style2.css">
+    </head>
+
+    <body>
+            <h1>Level 2</h1>
+        
+            <div class="message">
+                In order to defeat this level you need to pay attention to rhyme scheme.<br>
+                If you don't understand, every level has a theme.<br>
+                To unlock the key,<br>
+                You need to see, <br>
+                That nothing in life is free. <br>
+                With all that being said, what time are Costco gas lines the shortest? <br>
+            </div>
+
+            <div class="timer">
+                <span id="clock"></span>
+            </div>
+
+            <div class="options">
+                <button class="button"><img src="7.jpg" alt="Costco"></button>
+                <div class="content">
+                    <a href="fail.html">6:00 am</a>
+                    <a href="fail.html">7:00 am</a>
+                    <a href="fail.html">8:00 am</a>
+                    <a href="fail.html">9:00 am</a>
+                    <a href="fail.html">10:00 am</a>
+                    <a href="fail.html">11:00 am</a>
+                    <a href="fail.html">12:00 pm</a>
+                    <a href="fail.html">1:00 pm</a>
+                    <a href="fail.html">2:00 pm</a>
+                    <a href="level3.html">3:00 pm</a>
+                    <a href="fail.html">4:00 pm</a>
+                    <a href="fail.html">5:00 pm</a>
+                    <a href="fail.html">6:00 pm</a>
+                    <a href="fail.html">7:00 pm</a>
+                    <a href="fail.html">8:00 pm</a>
+                    <a href="fail.html">9:00 pm</a>
+                    <a href="fail.html">10:00 pm</a>
+                </div>
+
+            </div>
+    
+            <script type="text/javascript">
+                document.getElementById('clock').innerHTML = 03 + ":" + 00;
+                start();
+
+                function start(){
+                    var currentTime = document.getElementById('clock').innerHTML;
+                    var time = currentTime.split(/[:]+/);
+                    var x = time[0];
+                    var s = seconds((time[1]-1));
+                    if(s == 59)
+                    {
+                        x = x-1;
+                    }
+                    document.getElementById('clock').innerHTML = x + ":" + s;
+                    setTimeout(start, 1000);
+                }
+
+                function seconds(sPlace){
+                    if(sPlace < 10 && sPlace >= 0)
+                    {
+                        sPlace= "0" +sPlace;
+                    }
+                    if(sPlace < 0){
+                        sPlace="59";
+                    }
+                    return sPlace;
+                }
+
+                setTimeout(function(){
+                    window.location.href="fail.html"}, 3*60*1000);
+                
+            </script>
+        
+    </body>
+</html>

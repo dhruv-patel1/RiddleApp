@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Level 9</title>
+    <link rel="stylesheet" type="text/css" href="style9.css" />
+  </head>
+
+  <body>
+    <h1>Level 9</h1>
+    <div class="message">
+      No clues this time.<br />
+      Look around and f<a href="finish.html">i</a>nd the solution. <br />
+      Let me add some gibberish for confusion<br />
+      ubifufnviernfwinunrf<br />
+    </div>
+
+    <div class="coin" id="coin"></div>
+    <div class="buttons">
+      <input type="button" id="flip" onclick="coinToss()" value="Flip" />
+      <input type="button" id="flip" onclick="coinToss()" value="Flip" />
+      <input type="button" id="flip" onclick="coinToss()" value="Flip" />
+      <input type="button" id="flip" onclick="coinToss()" value="Flip" />
+      <input type="button" id="flip" onclick="coinToss()" value="Flip" />
+      <input type="button" id="flip" onclick="coinToss()" value="Flip" />
+      <input type="button" id="flip" onclick="coinToss()" value="Flip" />
+    </div>
+
+    <script type="text/javascript">
+      var coin = document.getElementById("coin");
+      var button = document.getElementById("button");
+
+      function coinToss() {
+        var x = Math.floor(Math.random() * 2);
+
+        if (x === 0) {
+          coin.innerHTML = "Heads";
+        } else {
+          coin.innerHTML = "Tails";
+        }
+      }
+    </script>
+  </body>
+</html>

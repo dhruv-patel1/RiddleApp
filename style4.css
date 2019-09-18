@@ -1,0 +1,77 @@
+html {
+  background-color: lightsalmon;
+}
+
+h1 {
+  font-family: Consolas, "Courier New", Courier, monospace;
+  text-align: center;
+  text-shadow: 2px 1px palegreen;
+}
+
+div.message {
+  background-color: rgb(231, 255, 192);
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  border: 3px solid black;
+  padding: 5px 5px;
+}
+
+.auto-advance img {
+  position: relative;
+  top: -14px;
+}
+
+.phrase-guess {
+  position: relative;
+  text-align: center;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  top: -10px;
+}
+label {
+  font-size: 1.5em;
+  font-family: Consolas, "Courier New", Courier, monospace;
+}
+.guess-box {
+  text-align: center;
+}
+.guess-box input.submit {
+  position: relative;
+  background: greenyellow;
+  color: black;
+  border-style: outset;
+  border-color: lime;
+  height: 50px;
+  width: 100px;
+  font: bold 15px arial, sans-serif;
+  text-shadow: none;
+  bottom: 10px;
+}
+
+input.guess {
+  position: relative;
+  width: 20%;
+  border: 2px solid lightgreen;
+  border-radius: 4px;
+  margin: 8px 0;
+  padding: 8px;
+  box-sizing: border-box;
+  height: 50px;
+  font-size: 3em;
+  font-family: Consolas, "Courier New", Courier, monospace;
+}
+
+.memes {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 40px;
+}
+
+p.life_count {
+  font-size: 1.5em;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  color: palegreen;
+}

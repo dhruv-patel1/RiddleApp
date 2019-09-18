@@ -1,0 +1,40 @@
+html{
+    background-color:rgb(47, 150, 163);
+}
+
+h1{
+    font-family: Consolas, "Courier New", Courier, monospace;
+    text-align: center;
+    text-shadow: 2px 1px crimson;
+}
+
+div.message{
+    background-color: aquamarine;
+    display:block;
+    text-align: center;
+    font-size: 1em;
+    font-family: Consolas, "Courier New", Courier, monospace;
+    border: 3px solid black;
+    padding: 5px 5px;
+}
+
+.grid{
+    padding-top: 20px;
+    display:flex;
+    justify-content: center;
+}
+
+
+button{
+    border: 2px solid black;
+    cursor: crosshair;
+    font-size: 16px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-family: Consolas, "Courier New", Courier, monospace;
+}
+
+button:hover{
+    background-color: tomato;
+}

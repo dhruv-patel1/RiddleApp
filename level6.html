@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Level 6</title>
+    <link rel="stylesheet" type="text/css" href="style6.css" />
+  </head>
+
+  <body>
+    <h1>Level 6</h1>
+    <div class="message">
+      Find the correct combinations of clicks that will unlock the next
+      level.<br />
+      Each dot will require anywhere from 1-10 clicks<br />
+      There is only one click sequence as the solution<br />
+      Hint: "2"<br />
+      Refresh to clear answer choices<br />
+    </div>
+    <div class="dot-holders">
+      <button class="dot" id="dot" onclick="clickMe()">
+        ●
+      </button>
+      <button class="dot" id="dot2" onclick="clickMetwo()">
+        ●
+      </button>
+
+      <button class="dot" id="dot3" onclick="clickMethree()">
+        ●
+      </button>
+      <button type="submit" id="submit" onclick="checkAns()">
+        Submit Answer
+      </button>
+    </div>
+
+    <script type="text/javascript">
+      var clicks = 0;
+      var clicks2 = 0;
+      var clicks3 = 0;
+      function clickMe() {
+        clicks++;
+        if (clicks <= 10) {
+          document.getElementById("dot").innerHTML = clicks;
+        }
+      }
+      function clickMetwo() {
+        clicks2++;
+        if (clicks2 <= 10) {
+          document.getElementById("dot2").innerHTML = clicks2;
+        }
+      }
+      function clickMethree() {
+        clicks3++;
+        if (clicks3 <= 10) {
+          document.getElementById("dot3").innerHTML = clicks3;
+        }
+      }
+      function checkAns() {
+        if (clicks === 7 && clicks2 === 5 && clicks3 === 3) {
+          window.location.href = "level7.html";
+        } else {
+          window.location.href = "fail.html";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html style="overflow-y: hidden; overflow-x:hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Congrats</title>
+  </head>
+
+  <body style="margin: 0;">
+    <div
+      class="message"
+      style="background-color: black; color:white;text-align: center;font-family: Consolas; font-size: 2em;padding-top:30px;"
+    >
+      <header>Congratulations. You win nothing.</header>
+    </div>
+
+    <canvas style="background-color:#000;"> </canvas>
+    <script type="text/javascript">
+      var canvas = document.querySelector("canvas");
+      var context = canvas.getContext("2d");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      function Circle(x, y, dx, dy, r, color) {
+        this.x = x;
+        this.y = y;
+        this.dx = dx;
+        this.dy = dy;
+        this.r = r;
+        this.color = color;
+        this.draw = function() {
+          context.beginPath();
+          context.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+          context.fillStyle = "hsl(" + color + ",100%,50%)";
+          context.fill();
+        };
+
+        this.update = function() {
+          if (this.x + this.r > canvas.width || this.x - this.r < 0) {
+            this.dx = -this.dx;
+          }
+          if (this.y + this.r > canvas.height || this.y - this.r < 0) {
+            this.dy = -this.dy;
+          }
+          this.x += this.dx;
+          this.y += this.dy;
+          this.draw();
+        };
+      }
+
+      var circleArray = [];
+      for (var i = 0; i <= 100; i++) {
+        var x = r * 2 + r;
+        var y = r * 2 + r;
+        var dx = Math.random() * 8;
+        var dy = Math.random() * 8;
+        var r = 10;
+        var color = 360 * Math.random();
+        circleArray.push(new Circle(x, y, dx, dy, r, color));
+      }
+      function animate() {
+        requestAnimationFrame(animate);
+        context.fillStyle = "rgba(0,0,0,0.1)";
+        context.fillRect(0, 0, innerWidth, innerHeight);
+        for (var i = 0; i < circleArray.length; i++) {
+          circleArray[i].update();
+        }
+      }
+      requestAnimationFrame(animate);
+    </script>
+  </body>
+</html>

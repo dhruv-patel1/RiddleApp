@@ -1,0 +1,27 @@
+html {
+  background-color: #14ff65;
+}
+
+body h1 {
+  text-align: center;
+  padding-top: 10px;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  font-size: 2.5em;
+}
+body h4 {
+  text-align: center;
+  padding-top: 60px;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  font-size: 1em;
+}
+
+body div a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.other {
+  background-color: coral;
+}

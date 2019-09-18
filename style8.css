@@ -1,0 +1,45 @@
+html {
+  background-color: deepskyblue;
+}
+
+h1 {
+  font-family: Consolas, "Courier New", Courier, monospace;
+  text-align: center;
+  text-shadow: 2px 1px yellow;
+}
+
+div.message {
+  background-color: rgb(236, 240, 33);
+  display: block;
+  text-align: center;
+  font-size: 5em;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  border: 3px solid black;
+  padding: 5px 5px;
+}
+
+.options {
+  margin: 20px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+input.option {
+  border: 3px solid black;
+  width: 300px;
+  height: 150px;
+  font-size: 3em;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  text-align: center;
+  margin: 20px;
+}
+
+input:hover {
+  background-color: aquamarine;
+}
+#op1 {
+  color: green;
+}
+#op2 {
+  color: red;
+}

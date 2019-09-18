@@ -1,0 +1,47 @@
+html {
+  background-color: lightsalmon;
+}
+
+h1 {
+  font-family: Consolas, "Courier New", Courier, monospace;
+  text-align: center;
+  text-shadow: 2px 1px palegreen;
+}
+
+div.message {
+  background-color: rgb(231, 255, 192);
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  border: 3px solid black;
+  padding: 5px 5px;
+}
+
+.dot-holders {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.dot {
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  font-size: 6em;
+  color: mediumseagreen;
+}
+
+#submit {
+  display: inline-block;
+  background: rgb(47, 255, 151);
+  color: black;
+  border-style: outset;
+  border-color: rgb(0, 68, 255);
+  height: 75px;
+  width: 150px;
+  font-size: 1.5em;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  text-shadow: none;
+  bottom: 10px;
+}

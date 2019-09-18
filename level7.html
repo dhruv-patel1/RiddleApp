@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Level 7</title>
+    <link rel="stylesheet" type="text/css" href="style7.css" />
+  </head>
+
+  <body>
+    <h1>Level 7</h1>
+    <div class="message">
+      You're on the right track.<br />
+      But, it's time for another little snack.<br />
+      Yup, some healthy nutrious riddles.<br />
+      Please enter all guesses in lowercase<br />
+    </div>
+
+    <div class="riddle-container">
+      <div class="q1">
+        <p>
+          John's height is 5 feet, he's an assistant at a butcher's shop, and
+          wears size 9 shoes. What does he weigh?
+        </p>
+        <input type="text" id="class1" class="guess" maxlength="4" />
+        <input type="submit" class="submit" id="submit" onclick="checkAns()" />
+        <p id="TF"></p>
+      </div>
+
+      <div class="q2">
+        <p>
+          I go all around the world but I still stay in a corner. Who am I?
+        </p>
+        <input type="text" id="class2" class="guess" maxlength="5" />
+        <input type="submit" class="submit" id="submit" onclick="checkAns2()" />
+        <p id="TF2"></p>
+      </div>
+
+      <div class="q3">
+        <p>
+          A certain five letter word becomes shorter when you add two letters to
+          it. What is the word?
+        </p>
+        <input type="text" id="class3" class="guess" maxlength="5" />
+        <input type="submit" class="submit" id="submit" onclick="checkAns3()" />
+        <p id="TF3"></p>
+      </div>
+
+      <div class="q4">
+        <p>
+          What is the answer to this question.?
+        </p>
+        <input type="text" id="class4" class="guess" maxlength="4" />
+        <input type="submit" class="submit" id="submit" onclick="checkAns4()" />
+        <p id="TF4"></p>
+      </div>
+      <div class="checker">
+        <input
+          type="submit"
+          onclick="lastCheck()"
+          value="Level-8"
+          id="check"
+          class="check"
+        />
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var correct1 = false;
+      var correct2 = false;
+      var correct3 = false;
+      var correct4 = false;
+      function checkAns() {
+        var guess = document.getElementById("class1").value;
+        if (guess === "meat") {
+          document.getElementById("TF").innerHTML = "correct";
+          correct1 = true;
+        } else {
+          document.getElementById("TF").innerHTML = "incorrect";
+        }
+      }
+
+      function checkAns2() {
+        var guess = document.getElementById("class2").value;
+        if (guess === "stamp") {
+          document.getElementById("TF2").innerHTML = "correct";
+          correct2 = true;
+        } else {
+          document.getElementById("TF2").innerHTML = "incorrect";
+        }
+      }
+
+      function checkAns3() {
+        var guess = document.getElementById("class3").value;
+        if (guess === "short") {
+          document.getElementById("TF3").innerHTML = "correct";
+          correct3 = true;
+        } else {
+          document.getElementById("TF3").innerHTML = "incorrect";
+        }
+      }
+
+      function checkAns4() {
+        var guess = document.getElementById("class4").value;
+        if (guess === "what") {
+          document.getElementById("TF4").innerHTML = "correct";
+          correct4 = true;
+        } else {
+          document.getElementById("TF4").innerHTML = "incorrect";
+        }
+      }
+      function lastCheck() {
+        if (
+          Boolean(correct1) == true &&
+          Boolean(correct2) == true &&
+          Boolean(correct3) == true &&
+          Boolean(correct4) == true
+        ) {
+          window.location.href = "level8.html";
+        }
+      }
+    </script>
+  </body>
+</html>

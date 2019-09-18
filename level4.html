@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Level 4</title>
+    <link rel="stylesheet" type="text/css" href="style4.css" />
+  </head>
+
+  <body>
+    <h1>Level 4</h1>
+
+    <div class="message">
+      To beat the level you will need to guess the number I have in mind<br />
+      4 digits, an arbitrary value<br />
+      ONCE you realize that this message is more important than it looks<br />
+      You will be a6le to decipher the number<br />
+      Dont be foo1ed, this isn't as easy as you might think<br />
+      Ill be nice and leave you with this hint: W0ll3Y
+    </div>
+    <!--answer: 3161-->
+    <!---5 tries-->
+
+    <div class="auto-advance">
+      <a href="level5.html">
+        <img src="auto-advanceR.png" height="4px" width="6px" />
+      </a>
+    </div>
+
+    <div class="guess-box">
+      <label for="guessfield">Enter your guess:</label>
+      <input type="text" id="guess" class="guess" />
+      <input type="submit" value="Submit" class="submit" id="submit" />
+      <p id="life_count"></p>
+    </div>
+
+    <div class="memes">
+      <img src="brain.gif" />
+    </div>
+
+    <script type="text/javascript">
+      var x = 3161;
+      var numTries = 4;
+
+      document.getElementById("submit").onclick = function() {
+        var guess = document.getElementById("guess").value;
+
+        if (guess == x) {
+          window.location.href = "level5.html";
+        } else {
+          numTries--;
+          man = document.getElementById("life_count");
+          life_count.innerHTML = "You have " + numTries + " lives remaining";
+          if (numTries == 0) {
+            window.location.href = "fail.html";
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

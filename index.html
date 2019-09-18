@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="UTF-8" />
+        <title>Solve the Mystery Puzzle Game</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet1.css">
+
+    </head>
+
+    <body>
+        <h1>Solve the Puzzle</h1>
+
+        <div class="riddle">
+            In order to start the game, you must find the path that will lead you to your mystery.<br/> 
+            The reward for beating game is knowing that you can beat this game with very little thought.<br/> 
+             If you know you know the Truth 0f this Paradox.<br/> 
+            Left, why go left when you can go right.<br/> 
+        That's all I have to say, except that a square has fo(u)r [*o*****].
+        </div>
+
+        <div class="grid">
+            <button class="but" onclick="onePic()">1</button>
+            <button class="but" onclick="twoPic()">2</button>
+            <button class ="but" onclick="threePic()">3</button>
+            <button class="but" onclick="fourPic()">4</button> 
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <a href="level1.html"><img src="1.jpg" alt="1"></a>
+                <a href="failbeforestart.html"><img src="2.jpg" alt="2"></a>
+                <a href="failbeforestart.html"><img src="5.jpg" alt="5"></a>
+                <a href="failbeforestart.html"><img src="4.jpg" alt="4">v
+            </div>
+            <div class="column">
+                <a href="failbeforestart.html"><img src="5.jpg" alt="5"></a>
+                <a href="failbeforestart.html"><img src="6.jpg" alt="6"></a>
+                <a href="failbeforestart.html"><img src="2.jpg" alt="2"></a>
+                <a href="failbeforestart.html"><img src="4.jpg" alt="4"></a>
+            </div>
+            <div class="column">
+                <a href="failbeforestart.html"><img src="4.jpg" alt="4"></a>
+                <a href="failbeforestart.html"><img src="3.jpg" alt="3"></a>
+                <a href="failbeforestart.html"><img src="2.jpg" alt="2"></a>
+                <a href="failbeforestart.html"><img src="1.jpg" alt="1"></a>
+            </div>
+            <div class="column">
+                <a href="failbeforestart.html"></a><img src="1.jpg" alt="1"></a>
+                <a href="failbeforestart.html"></a><img src="6.jpg" alt="6"></a>
+                <a href="failbeforestart.html"></a><img src="5.jpg" alt="5"></a>
+                <a href="failbeforestart.html"><img src="3.jpg" alt="3"></a>
+            </div>
+        </div>
+
+       <script>
+       var pics = document.getElementsByClassName("column");
+       var i;
+       
+       function onePic()
+       {
+           for(i=0; i<pics.length; i++)
+           {
+            pics[i].style.flex = "60%";
+           }
+       }
+
+       function twoPic()
+       {
+           for(i=0; i<pics.length; i++)
+           {
+            pics[i].style.flex = "40%";
+           }
+       }
+
+       function threePic()
+       {
+            for(i=0; i<pics.length;i++)
+            {
+            pics[i].style.flex="25%";
+            }
+       }
+
+       function fourPic()
+       {
+           for(i=0; i<pics.length; i++)
+           {
+            pics[i].style.flex = "20%";
+           }
+       }
+       </script> 
+    </body>
+
+</html>
